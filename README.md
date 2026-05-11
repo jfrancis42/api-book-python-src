@@ -1,11 +1,11 @@
-# Source Code — *Requests Granted*
+ # Source Code — *Requests Granted*
+### Crafting REST API Clients and Servers in Python
 
-This repository contains the complete, runnable source code for every chapter
-of *Requests Granted: Crafting REST API Clients and Servers in Python* by
-George Jeffrey Francis (Ordo Artificum Press, 2026).
+Source code for every chapter of *Requests Granted* by George Jeffrey Francis
+(Ordo Artificum Press, 2026).
 
-**The book is available on Amazon:**
-https://www.amazon.com/dp/PLACEHOLDER
+**Available on Amazon:**
+https://www.amazon.com/dp/B0GZCX6G1D/ref=tmm_pap_swatch_0?_encoding=UTF8&sr=8-1
 
 ---
 
@@ -18,8 +18,6 @@ chapters.
 | Directory | Chapter |
 |-----------|---------|
 | `ch00_before_you_begin/` | Chapter 0: Before You Begin |
-| `ch01_what_is_an_api/` | *(no runnable code)* |
-| `ch02_what_is_rest/` | *(no runnable code)* |
 | `ch03_devtools/` | Chapter 3: Reverse-Engineering APIs with Browser DevTools |
 | `ch04_first_call/` | Chapter 4: Your First API Call |
 | `ch05_json/` | Chapter 5: JSON — The Common Tongue |
@@ -67,21 +65,26 @@ chapters.
 
 ## Getting Started
 
-Most chapters in Part I require a GitHub personal access token. Create a
-`.env` file in each chapter directory you want to run:
+**Requirements:** Python 3.10+
+
+Chapters 4–22 (Part I) call the GitHub API and require a personal access token.
+Create a `.env` file in each chapter directory you want to run:
 
 ```
 GITHUB_TOKEN=your_token_here
 ```
 
-Part II (chapters 23–44) runs entirely on your local machine and does not
-require a token.
+Part II (chapters 23–44) runs a local FastAPI server and does not require a token.
 
-Install dependencies with:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-A `requirements.txt` is included at the top level of the book's source tree;
-each chapter directory also lists only the packages it actually uses.
+Run any example:
+
+```bash
+cd ch04_first_call/
+python main.py
+```
